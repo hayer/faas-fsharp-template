@@ -1,6 +1,10 @@
 module Function
 
 open System
+open FSharp.Data
+
+type RequestParameters = JsonProvider<"""{"name": "John Doe", "age": 31}""">
 
 let Handle(input:string) =
-    Console.WriteLine(sprintf "Input %s" input)
+    let requestParameters = RequestParameters.Parse(input)
+    sprintf "Hello %s, age %i" requestParameters.Name, requestParameters.Age |> Console.WriteLine
