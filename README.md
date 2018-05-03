@@ -10,3 +10,6 @@ faas-cli new myfunction --lang fsharp
 You will find the newly created directory ```myfunction```:
  * Function.fsproj : project definition
  * FunctionHandler.fs : entry point
+   * ```type RequestParameters``` example of type for deserializing input parameters
+
+#### Feel like something is missing? Open an issue!
