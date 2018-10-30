@@ -1,4 +1,4 @@
-# F# Template for OpenFaaS-cli 
+# F# Template for [OpenFaaS-cli](https://github.com/openfaas/faas-cli) 
 
 ## Usage
 
