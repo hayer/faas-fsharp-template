@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:2.0-sdk as builder
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 as builder
 
 ENV DOTNET_CLI_TELEMETRY_OPTOUT 1
 
@@ -16,7 +16,7 @@ COPY .  .
 
 RUN dotnet publish -c release -o published
 
-FROM microsoft/dotnet:2.1-runtime
+FROM mcr.microsoft.com/dotnet/core/runtime:3.1
 
 COPY --from=watchdog /fwatchdog /usr/bin/fwatchdog
 RUN chmod +x /usr/bin/fwatchdog
