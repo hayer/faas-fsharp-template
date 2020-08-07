@@ -1,3 +1,4 @@
+FROM openfaas/classic-watchdog:0.18.18 as watchdog
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 as builder
 
 ENV DOTNET_CLI_TELEMETRY_OPTOUT 1
