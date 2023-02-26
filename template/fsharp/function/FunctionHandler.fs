@@ -1,7 +1,7 @@
 module Function
 
 open System
-open FSharp.Data
+open FSharp.Data.JsonProvider   
 
 type RequestParameters = JsonProvider<"""{"name": "John Doe", "age": 31}""">
 
